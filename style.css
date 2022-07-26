@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0px;
+}
+body {
+    background-color: gray;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: 560px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+}
+
+.row {
+    display: flex;
+    height: 8.75px;
+    width: 560px;
+    /* background-color: azure; */
+}
+
+.cell {
+    /* background-color: blue; */
+    height: 8.75px;
+    width: 8.75px;
+    border-width: 1px;
+    border-color: rgb(177, 177, 221);
+    border-style: solid;
+
+}
+
+.hovered {
+    background-color: black;
+}
