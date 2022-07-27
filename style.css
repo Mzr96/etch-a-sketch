@@ -39,6 +39,7 @@ body {
     border-left-style: solid;
     border-bottom-style: solid;
     border-radius: 5px;
+    /* background-color: pink; */
 }
 
 .hovered {
@@ -65,7 +66,7 @@ body {
     border-radius: 16px;
     background-color: rgb(15, 15, 104);
     color: white;
-    margin-left: 150px;
+    margin-left: 50px;
 }
 
 .left {

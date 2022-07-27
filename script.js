@@ -3,7 +3,7 @@
 const grid = document.querySelector('.grid');
 const sizeButtons = document.querySelectorAll('.set-size')
 const btnReset = document.querySelector('.reset')
-let gridSize = 64;
+let gridSize = 32;
 
 const createGrid = function () {
     for (let i = 0; i < gridSize; i++) {
@@ -18,6 +18,7 @@ const createGrid = function () {
             rowGrid.appendChild(cellGrid);
             cellGrid.addEventListener('mouseover', function (e) {
                 e.target.classList.add('hovered')
+                e.target.style.backgroundColor = randomColor()
             })
         }
         grid.appendChild(rowGrid)
@@ -33,7 +34,15 @@ const resetGrid = function () {
         rows.forEach(row => row.remove())
         grid.classList.remove('full')
     }
-} 
+}
+
+const randomColor = function () {
+    const r  = Math.floor(Math.random() * 255) + 1;
+    const g  = Math.floor(Math.random() * 255) + 1;
+    const b  = Math.floor(Math.random() * 255) + 1;
+    const color = `rgb(${r}, ${b}, ${g})`;
+    return color;
+}
 
 sizeButtons.forEach(btn => btn.addEventListener('click', function (e) {
     if (e.target.classList.contains('small')) {
@@ -51,4 +60,5 @@ sizeButtons.forEach(btn => btn.addEventListener('click', function (e) {
     }
 }))
 
-btnReset.addEventListener('click', resetGrid)
+btnReset.addEventListener('click', resetGrid);
+createGrid()
