@@ -12,22 +12,24 @@
   <body>
     <h1 class="heading-primary">Etch a Sketch</h1>
     <main>
-      <div class="controller">
-        <input type="color" name="color-input" id="color-input" />
-        <button class="btn color">Color</button>
-        <button class="btn random">Random</button>
-        <button class="btn erase">Erase</button>
-        <button class="btn clear">Clear</button>
-        <div>
+      <div class="grid-controller">
+        <div class="grid-color">
+          <input type="color" name="grid-color__input" id="grid-color__input" />
+          <button class="btn btn-color active">Color</button>
+        </div>
+        <button class="btn btn-random">Random</button>
+        <button class="btn btn-erase">Erase</button>
+        <button class="btn btn-clear">Clear</button>
+        <div class="grid-size">
           <input
             type="range"
             min="32"
             max="64"
             step="4"
             name=""
-            id="grid-size"
+            id="grid-size__input"
           />
-          <span class="show-grid-size"></span>
+          <span class="grid-size--current"></span>
         </div>
       </div>
       <div class="grid"></div>
